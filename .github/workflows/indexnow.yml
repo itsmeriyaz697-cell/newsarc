@@ -1,0 +1,76 @@
+name: Notify IndexNow
+
+
+
+on:
+
+  push:
+  
+    branches: [main]
+    
+    paths:
+    
+      - 'index.html'
+      
+      - 'sitemap.xml'
+      
+      - 'robots.txt'
+      
+      - 'scripts/submit-indexnow.mjs'
+      
+      - '.github/workflows/indexnow.yml'
+      
+  workflow_dispatch:
+  
+
+
+permissions:
+
+  contents: read
+  
+
+
+jobs:
+
+  submit:
+  
+    runs-on: ubuntu-latest
+    
+    timeout-minutes: 5
+    
+    steps:
+    
+      - name: Checkout site
+      
+        uses: actions/checkout@v4
+        
+
+
+      - name: Submit sitemap URLs to IndexNow
+      
+        env:
+        
+          SITE_URL: https://newsarc-ga3f.vercel.app
+          
+        run: node scripts/submit-indexnow.mjs
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
