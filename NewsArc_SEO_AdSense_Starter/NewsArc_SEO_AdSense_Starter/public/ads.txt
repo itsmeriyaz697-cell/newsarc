@@ -1,0 +1,4 @@
+# Google AdSense
+# Add the exact publisher record supplied by Google after approval.
+# Example format only:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
