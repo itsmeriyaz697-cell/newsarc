@@ -1,0 +1,11 @@
+{
+  "name": "NewsArc — आजको खबर, आजै",
+  "short_name": "NewsArc",
+  "description": "Fast, factual news and explainers from Nepal and around the world.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
+  "lang": "ne",
+  "icons": [{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml"}]
+}

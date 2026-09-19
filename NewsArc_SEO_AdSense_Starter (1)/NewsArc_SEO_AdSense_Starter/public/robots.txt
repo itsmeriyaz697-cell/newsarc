@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://newsarc-ga3f.vercel.app/sitemap.xml
+Sitemap: https://newsarc-ga3f.vercel.app/news-sitemap.xml
