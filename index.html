@@ -230,5 +230,66 @@ Error generating stack: `+l.message+`
 </script>
 
     <div id="root"></div>
-  </body>
+  <script id="newsarc-route-seo-v1">
+(function () {
+  var path = window.location.pathname.replace(/\/+$/, '') || '/';
+  var routes = {
+    '/': ['NewsArc — आजको खबर, आजै', 'NewsArc — आजको खबर, आजै। नेपाल र विश्वका महत्वपूर्ण विषयमा स्पष्ट, जिम्मेवार र सन्दर्भयुक्त समाचार।'],
+    '/latest': ['Latest News — NewsArc', 'The latest verified Nepal and world news from NewsArc.'],
+    '/national': ['National News — NewsArc', 'Latest national news and public-interest reporting from Nepal.'],
+    '/politics': ['Politics News — NewsArc', 'Clear, contextual politics news from Nepal and around the world.'],
+    '/business': ['Business News — NewsArc', 'Business, economy, markets and entrepreneurship news from NewsArc.'],
+    '/technology': ['Technology News — NewsArc', 'Technology, innovation and digital trends from Nepal and the world.'],
+    '/sports': ['Sports News — NewsArc', 'Sports news, results and stories from Nepal and around the world.'],
+    '/entertainment': ['Entertainment News — NewsArc', 'Entertainment, culture and lifestyle news from NewsArc.'],
+    '/world': ['World News — NewsArc', 'Important world news explained clearly by NewsArc.'],
+    '/health': ['Health News — NewsArc', 'Health, medicine and public-health reporting from NewsArc.'],
+    '/education': ['Education News — NewsArc', 'Education news and useful learning stories from NewsArc.'],
+    '/lifestyle': ['Lifestyle News — NewsArc', 'Lifestyle, society and culture stories from NewsArc.'],
+    '/opinion': ['Opinion — NewsArc', 'Commentary and perspective from NewsArc contributors.'],
+    '/about': ['About NewsArc', 'Learn about NewsArc, its editorial mission and independent newsroom.'],
+    '/contact': ['Contact NewsArc', 'Contact the NewsArc editorial team.'],
+    '/privacy-policy': ['Privacy Policy — NewsArc', 'Read the NewsArc privacy policy.'],
+    '/terms': ['Terms of Use — NewsArc', 'Read the NewsArc terms of use.'],
+    '/editorial-policy': ['Editorial Policy — NewsArc', 'Read NewsArc editorial standards and verification principles.'],
+    '/corrections': ['Corrections — NewsArc', 'Read NewsArc correction and update policy.'],
+    '/authors': ['Authors — NewsArc', 'Meet the NewsArc editorial contributors.'],
+    '/founder': ['Riyaz Chalise — Founder of NewsArc', 'Riyaz Chalise is the founder and publisher of NewsArc, a digital news publication covering Nepal and world news.'],
+    '/search': ['Search NewsArc', 'Search NewsArc stories.']
+  };
+  var data = routes[path] || null;
+  if (path.indexOf('/news/') === 0) {
+    var label = path.slice(6).replace(/[-_]+/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+    data = [label + ' — NewsArc', 'Read the latest NewsArc story and follow the source link for full reporting.'];
+  }
+  if (!data) return;
+  document.title = data[0];
+  var canonical = window.location.origin + (path === '/' ? '/' : path);
+  function setMeta(selector, attr, value) {
+    var el = document.head.querySelector(selector);
+    if (!el) { el = document.createElement('meta'); el.setAttribute(attr, selector.indexOf('property=') >= 0 ? selector.match(/property="([^"]+)/)[1] : selector.match(/name="([^"]+)/)[1]); document.head.appendChild(el); }
+    el.setAttribute('content', value);
+  }
+  var link = document.head.querySelector('link[rel="canonical"]');
+  if (link) link.setAttribute('href', canonical);
+  setMeta('meta[name="description"]', 'name', data[1]);
+  setMeta('meta[property="og:title"]', 'property', data[0]);
+  setMeta('meta[property="og:description"]', 'property', data[1]);
+  setMeta('meta[property="og:url"]', 'property', canonical);
+  setMeta('meta[name="twitter:title"]', 'name', data[0]);
+  setMeta('meta[name="twitter:description"]', 'name', data[1]);
+  setMeta('meta[name="robots"]', 'name', path === '/search' ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1');
+  if (path === '/founder') {
+    var profile = document.createElement('script');
+    profile.type = 'application/ld+json';
+    profile.textContent = JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'ProfilePage', '@id': canonical + '#profile',
+      'url': canonical, 'name': data[0], 'isPartOf': {'@id': window.location.origin + '/#website'},
+      'mainEntity': {'@type': 'Person', '@id': window.location.origin + '/founder#riyaz-chalise', 'name': 'Riyaz Chalise', 'jobTitle': 'Founder and Publisher', 'url': canonical}
+    });
+    document.head.appendChild(profile);
+  }
+})();
+</script>
+</body>
 </html>
