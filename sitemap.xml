@@ -405,4 +405,39 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://newsarc-ga3f.vercel.app/guides/see-result-2083-how-to-check</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://newsarc-ga3f.vercel.app/guides/today-weather-kathmandu</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://newsarc-ga3f.vercel.app/guides/nepal-school-holiday-update</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://newsarc-ga3f.vercel.app/guides/nepal-football-fixtures-today</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://newsarc-ga3f.vercel.app/guides/today-gold-price-nepal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://newsarc-ga3f.vercel.app/guides/latest-ai-tools-for-students</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://newsarc-ga3f.vercel.app/guides/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
