@@ -1,0 +1,2 @@
+/* Crawl-first homepage content remains useful before JavaScript hydrates the interactive experience. */
+.crawl-content{max-width:900px}.crawl-content .intro{padding-top:3.5rem;padding-bottom:3.5rem}.crawl-content .lead{font-size:1.18rem;color:var(--muted)}.crawl-content h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.1}.crawl-content h2{margin-top:2rem}.crawl-links{padding-left:1.3rem;display:grid;gap:.6rem}.crawl-links a{font-weight:700;color:var(--red)}
