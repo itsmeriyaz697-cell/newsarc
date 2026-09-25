@@ -1,15 +1,12 @@
 {
   "name": "NewsArc — आजको खबर, आजै",
   "short_name": "NewsArc",
-  "description": "नेपाल र विश्वका महत्वपूर्ण विषयमा स्पष्ट, जिम्मेवार र सन्दर्भयुक्त समाचार।",
+  "description": "नेपाल र विश्वका समाचार, उपयोगी व्याख्या र जिम्मेवार जानकारी।",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#f8fafc",
-  "theme_color": "#0a1b32",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0b1f3a",
   "lang": "ne",
-  "dir": "ltr",
-  "icons": [
-    {"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
-  ]
+  "icons": [{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
 }
