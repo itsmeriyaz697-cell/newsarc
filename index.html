@@ -167,7 +167,37 @@ Error generating stack: `+a.message+`
       <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"WebSite","name":"NewsArc","alternateName":"NewsArc News","url":"https://newsarc-ga3f.vercel.app/","potentialAction":{"@type":"SearchAction","target":"https://newsarc-ga3f.vercel.app/search?q={search_term_string}","query-input":"required name=search_term_string"}}
     </script>
-  </head>
+  <style id="newsarc-visual-polish-v1">
+:root { --newsarc-ink: #0a1b32; --newsarc-red: #e11d2e; --newsarc-paper: #f7f8fb; }
+html { scroll-behavior: smooth; }
+body { background: var(--newsarc-paper) !important; color: var(--newsarc-ink); }
+header { position: relative; z-index: 20; }
+header, nav { backdrop-filter: blur(16px); }
+main { overflow: hidden; }
+a { transition: color .18s ease, transform .18s ease, opacity .18s ease, box-shadow .18s ease; }
+a:hover { opacity: .9; }
+button { transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
+button:active, a:active { transform: scale(.98); }
+img { max-width: 100%; }
+img:not([src]), img[src=""] { visibility: hidden; }
+/* Give editorial cards a refined lift without changing their content or links. */
+article, [class*="rounded"], [class*="shadow"] { transition: transform .22s ease, box-shadow .22s ease; }
+article:hover, [class*="rounded"]:has(img):hover { transform: translateY(-3px); box-shadow: 0 16px 36px rgba(10,27,50,.12); }
+/* Keep the hero readable and attractive when a remote image is slow or unavailable. */
+img[alt*="banner"], img[alt*="Banner"], img[alt*="समाचार"] { background: linear-gradient(135deg, #0a1b32 0%, #123a60 52%, #e11d2e 150%); object-fit: cover; }
+section { scroll-margin-top: 5rem; }
+@media (max-width: 700px) {
+  body { overflow-x: hidden; }
+  nav { overflow-x: auto; scrollbar-width: none; }
+  nav::-webkit-scrollbar { display: none; }
+  h1 { font-size: clamp(2.2rem, 11vw, 4.5rem) !important; line-height: .98 !important; }
+  article, [class*="rounded"]:has(img) { transform: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+</style>
+</head>
   <body>
     <script id="manus-runtime">window.__MANUS_HOST_DEV__ = false;
 (function(){"use strict";var Mr={exports:{}},Kn={};/**
