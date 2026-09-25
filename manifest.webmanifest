@@ -1,0 +1,15 @@
+{
+  "name": "NewsArc — आजको खबर, आजै",
+  "short_name": "NewsArc",
+  "description": "नेपाल र विश्वका महत्वपूर्ण विषयमा स्पष्ट, जिम्मेवार र सन्दर्भयुक्त समाचार।",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0a1b32",
+  "lang": "ne",
+  "dir": "ltr",
+  "icons": [
+    {"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}
