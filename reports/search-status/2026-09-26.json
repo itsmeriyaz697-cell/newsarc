@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-09-26T07:45:16.995816+00:00",
+  "checks": {
+    "site": "https://newsarc-ga3f.vercel.app",
+    "homepage": {
+      "url": "https://newsarc-ga3f.vercel.app",
+      "http_status": 200,
+      "ok": true,
+      "bytes": 3763
+    },
+    "robots": {
+      "url": "https://newsarc-ga3f.vercel.app/robots.txt",
+      "http_status": 200,
+      "ok": true,
+      "bytes": 112
+    },
+    "sitemap": {
+      "url": "https://newsarc-ga3f.vercel.app/sitemap.xml",
+      "http_status": 200,
+      "ok": true,
+      "bytes": 2332,
+      "url_count": 23,
+      "has_news_sitemap": false
+    }
+  },
+  "google_rankings": {
+    "available": false,
+    "reason": "Set GOOGLE_CSE_API_KEY and GOOGLE_CSE_ID to enable ranking checks."
+  },
+  "search_console": {
+    "available": false,
+    "reason": "Set GOOGLE_SEARCH_CONSOLE_ACCESS_TOKEN to enable URL Inspection checks."
+  }
+}
